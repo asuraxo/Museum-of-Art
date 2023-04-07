@@ -2,6 +2,8 @@ import React from 'react'
 import useSWR from 'swr'
 import { Card, Button } from 'react-bootstrap';
 import Link from 'next/link'
+import Error from 'next/error'
+
 
 export default function ArtworkCard( {objectID} ) {
     const { data, error } = useSWR(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);    
