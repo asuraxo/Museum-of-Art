@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 import { useAtom } from 'jotai';
 import { favouritesAtom } from '@/store';
 import { useState, useEffect } from 'react';
+import { addToFavourites, removeFromFavourites } from '@/lib/userData';
 
 export default function ArtworkCardDetail( props ) {
     const {objectID} = props;
@@ -14,15 +15,15 @@ export default function ArtworkCardDetail( props ) {
     const [ showAdded, setShowAdded ] = useState(false);
 
     useEffect(() => {
-        setShowAdded(favouritesList.includes(objectID));
-    }, [favouritesList, objectID]);
+        setShowAdded(favouritesList?.includes(objectID))
+    }, [favouritesList]);
 
-    const favouritesClicked = () => {
+    const favouritesClicked = async () => {
         if (showAdded) {
-            setFavouritesList(current => current.filter(fav => fav !== objectID));
+            setFavouritesList(await removeFromFavourites(objectID));
             setShowAdded(false);
         } else {
-            setFavouritesList(current => [...current, objectID]);
+            setFavouritesList(await addToFavourites(objectID));
             setShowAdded(true);
         }
     }

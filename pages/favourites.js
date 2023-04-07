@@ -9,6 +9,8 @@ export default function Favourite () {
 
     const [ favouritesList ] = useAtom(favouritesAtom);
 
+    if(!favouritesList) return null;
+
     return favouritesList ? (
         <>
             <Row className="gy-4">

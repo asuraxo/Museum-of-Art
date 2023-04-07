@@ -33,6 +33,7 @@ module.exports.connect = function () {
 };
 
 module.exports.registerUser = function (userData) {
+
     return new Promise(function (resolve, reject) {
 
         if (userData.password != userData.password2) {

@@ -45,6 +45,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/api/user/register", (req, res) => {
+    // console.log(req.body)
     userService.registerUser(req.body)
     .then((msg) => {
         res.json({ "message": msg });
@@ -53,18 +54,9 @@ app.post("/api/user/register", (req, res) => {
     });
 });
 
-// app.post("/api/user/login", (req, res) => {
-//     userService.checkUser(req.body)
-//     .then((user) => {
-//         res.json({ "message": "login successful"});
-//     }).catch(msg => {
-//         res.status(422).json({ "message": msg });
-//     });
-// });
-
-// app.get("/api/user", (req, res) => {
-//     res.json({ "message": "testing" });
-// });
+app.get("/api/user", (req, res) => {
+    res.json({ "message": "testing" });
+});
 
 app.post("/api/user/login", (req, res) => {
     userService.checkUser(req.body)
