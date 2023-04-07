@@ -62,6 +62,9 @@ app.post("/api/user/register", (req, res) => {
 //     });
 // });
 
+// app.get("/api/user", (req, res) => {
+//     res.json({ "message": "testing" });
+// });
 
 app.post("/api/user/login", (req, res) => {
     userService.checkUser(req.body)
