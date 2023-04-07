@@ -1,8 +1,8 @@
-import React from 'react';
+// import React from 'react';
 import useSWR from 'swr';
 import Error from 'next/error';
 import Card from 'react-bootstrap/Card';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useAtom } from 'jotai';
 import { favouritesAtom } from '@/store';

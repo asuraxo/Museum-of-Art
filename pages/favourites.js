@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { useAtom } from 'jotai';
 import { favouritesAtom } from "@/store";
 import { Row, Col } from 'react-bootstrap';
