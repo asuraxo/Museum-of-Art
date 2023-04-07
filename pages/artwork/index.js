@@ -5,6 +5,7 @@ import useSWR from 'swr';
 import { Row, Col, Pagination, Card } from 'react-bootstrap';
 import ArtworkCard from '@/components/ArtworkCard';
 import validObjectIDList from '@/public/data/validObjectIDList.json';
+import Error from 'next/error'
 
 export default function ArtWorkIndex () {
     let PER_PAGE = 12;
