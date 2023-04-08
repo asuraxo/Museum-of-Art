@@ -31,4 +31,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-/user-api
+# user-api
+/user-api/
