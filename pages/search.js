@@ -6,13 +6,15 @@ import { useForm } from "react-hook-form";
 import { searchHistoryAtom } from "@/store";
 import { Row, Col, Form, Button } from "react-bootstrap";
 
+import { addToHistory } from "@/lib/userData";
+
 export default function AdvancedSearch() {
   const router = useRouter();
   const { register, handleSubmit, errors } = useForm();
   const [ searchHistory, setSearchHistory] = useAtom(searchHistoryAtom);
 
 
-  const submitForm = (data) => {
+  const submitForm = async (data) => {
     let queryString = `${data.searchBy}=true`;
     if (data.geoLocation) {
       queryString += `&geoLocation=${data.geoLocation}`;
@@ -23,7 +25,7 @@ export default function AdvancedSearch() {
     queryString += `&isOnView=${data.isOnView}`;
     queryString += `&isHighlight=${data.isHighlight}`;
     queryString += `&q=${data.q}`;
-    setSearchHistory(current => [...current, queryString]);
+    setSearchHistory(await addToHistory(queryString));
     router.push(`/artwork?${queryString}`);
   };
 

@@ -6,9 +6,11 @@ import { useRouter } from "next/router";
 import Card from 'react-bootstrap/Card';
 import styles from '@/styles/History.module.css';
 
+import { removeHistory } from '@/user-api/user-service';
+
 export default function History () {
 
-    const [ searchHistory ] = useAtom(searchHistoryAtom);
+    const [ searchHistory, setSearchHistory ] = useAtom(searchHistoryAtom);
     const router = useRouter();
     let parsedHistory = [];
 
@@ -23,14 +25,17 @@ export default function History () {
         router.push(`/artwork?${searchHistory[index]}`);
     }
 
-    const removeHistoryClicked = (e, index) => {
+    const removeHistoryClicked = async (e, index) => {
         e.stopPropagation();
-        setSearchHistory((current) => {
-            let x = [...current];
-            x.splice(index, 1);
-            return x;
-        });
+        // setSearchHistory((current) => {
+        //     let x = [...current];
+        //     x.splice(index, 1);
+        //     return x;
+        // });
+        setSearchHistory(await removeHistory(searchHistory[index]));
     }
+
+    if (!searchHistory) return null; 
 
     return (
     <>
