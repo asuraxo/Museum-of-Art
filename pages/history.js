@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Card from 'react-bootstrap/Card';
 import styles from '@/styles/History.module.css';
 
-import { removeHistory } from '@/user-api/user-service';
+import { removeFromHistory } from '@/lib/userData';
 
 export default function History () {
 
@@ -32,7 +32,7 @@ export default function History () {
         //     x.splice(index, 1);
         //     return x;
         // });
-        setSearchHistory(await removeHistory(searchHistory[index]));
+        setSearchHistory(await removeFromHistory(searchHistory[index]));
     }
 
     if (!searchHistory) return null; 

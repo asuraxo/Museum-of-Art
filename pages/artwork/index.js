@@ -8,7 +8,7 @@ import validObjectIDList from '@/public/data/validObjectIDList.json';
 import Error from 'next/error'
 
 export default function ArtWorkIndex () {
-    let PER_PAGE = 12;
+    var PER_PAGE = 12;
     const [ artworkList, setArtworkList ] = useState();
     const [ page, setPage ] = useState(1);
     const router = useRouter();
