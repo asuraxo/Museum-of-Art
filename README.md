@@ -2,6 +2,18 @@
 
 This project showcases a museum website featuring various artworks and exhibitions. Users can browse and search for artworks, view details about them, and add them to their favorite list. Also, they can explore artist details and find related works. Finally, the website includes a contact page where users can get in touch with the museum staff.
 
+## Features
+
+- Users can register for a new account and log in.
+- After log in, user may search through "Advance Search" or "Search"
+- For "Advance Search", user may specific the "Search Query", "Title / Tags / Artist or Culture", "Geo Location", "Medium"
+- For "Search", it is a basic search by "Search Query".
+- Each search is stored in "Search History".
+- List of results would be prompted if successful.
+- User may click to view the details and add to favourite.
+- Favorite List would be stored in the "Favourites"
+- After log out, session would be destroyed.
+
 Live Demo (Vercel) :
 
     https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app
@@ -14,13 +26,11 @@ Github Link :
 
 This project was developed using React.js and Next.js frameworks for the client-side and server-side rendering, respectively. Also, it uses:
 
-- React Icons for the icon components;
-- React Image Gallery for the artworks slider;
-- React Modal for the login and signup dialogs;
 - React Bootstrap for the responsive layout and UI components;
-- MongoDB for the database hosting;
-- Mongoose for the database modeling and querying;
-- Axios for the HTTP requests to the RESTful API.
+- MongoDB / Mongoose for the database hosting, modeling and querying;
+- useState, useEffect for the update of changes.
+- Jotai for the favourites and search history.
+- JWT for authentication
 
 ## Local Installation
 
