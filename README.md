@@ -17,13 +17,13 @@ This project showcases a museum website featuring various artworks and exhibitio
     
 - After log out, session would be destroyed.
 
-Live Demo (Vercel) :
+##Live Demo (Vercel) :
 
-    https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app
+   https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app
 
-Github Link :
+##Github Link :
 
-    https://github.com/asuraxo/Museum-of-Art
+   https://github.com/asuraxo/Museum-of-Art
 
 ## Dependencies
 
