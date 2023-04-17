@@ -1,38 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Museum of Art
 
-## Getting Started
+This project showcases a museum website featuring various artworks and exhibitions. Users can browse and search for artworks, view details about them, and add them to their favorite list. Also, they can explore artist details and find related works. Finally, the website includes a contact page where users can get in touch with the museum staff.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Vercel Link :
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Github Link :
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+https://github.com/asuraxo/Museum-of-Art
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Dependencies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project was developed using React.js and Next.js frameworks for the client-side and server-side rendering, respectively. Also, it uses:
 
-## Learn More
+- React Icons for the icon components;
+- React Image Gallery for the artworks slider;
+- React Modal for the login and signup dialogs;
+- React Bootstrap for the responsive layout and UI components;
+- MongoDB for the database hosting;
+- Mongoose for the database modeling and querying;
+- Axios for the HTTP requests to the RESTful API.
 
-To learn more about Next.js, take a look at the following resources:
+## Local installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To install and run this project on your local machine, please follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository from GitHub:
 
-## Deploy on Vercel
+    `https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Change to the project directory:
+
+   `cd Museum-of-Art`
+
+3. Install the dependencies:
+
+    `npm install`
+
+4. Set the environment variables for the MongoDB connection string and the session secret (in a .env.local file):
+
+   `NEXT_PUBLIC_API_URL=https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app/api`
+   
+   `DB_CONNECTION_STRING=mongodb+srv://...`
+   
+   `SESSION_SECRET=...`
+   
+
+5. Start the development server:
+
+   `npm run dev`
+   
+
+6. Open your browser and go to http://localhost:3000 to access the website.
+
+## License
+
+This project is licensed under the MIT License.
+
+
+
