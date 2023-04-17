@@ -5,13 +5,16 @@ This project showcases a museum website featuring various artworks and exhibitio
 ## Features
 
 - Users can register for a new account and log in.
+
 - After log in, user may search through "Advance Search" or "Search"
-- For "Advance Search", user may specific the "Search Query", "Title / Tags / Artist or Culture", "Geo Location", "Medium"
-- For "Search", it is a basic search by "Search Query".
-- Each search is stored in "Search History".
-- List of results would be prompted if successful.
+    - For "Advance Search", user may specific the "Search Query", "Title / Tags / Artist or Culture", "Geo Location", "Medium"
+    - For "Search", it is a basic search by "Search Query".
+    - Each search is stored in "Search History".
+- List of results would be prompted if search is successful.
+
 - User may click to view the details and add to favourite.
-- Favorite List would be stored in the "Favourites"
+    - Favorite List would be stored in the "Favourites"
+    
 - After log out, session would be destroyed.
 
 Live Demo (Vercel) :
