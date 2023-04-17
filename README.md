@@ -2,7 +2,7 @@
 
 This project showcases a museum website featuring various artworks and exhibitions. Users can browse and search for artworks, view details about them, and add them to their favorite list. Also, they can explore artist details and find related works. Finally, the website includes a contact page where users can get in touch with the museum staff.
 
-Vercel Link :
+Live Demo (Vercel) :
 
     https://web-422-a6-zvvi-52ubo6ww2-asuraxo.vercel.app
 
